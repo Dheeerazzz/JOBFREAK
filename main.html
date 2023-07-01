@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Left Panel Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="left-panel">
+    <a class="component" href="#home" ><div class="anchors" style="margin-top: 50px;">Home</div></a>
+    <a class="component" href="#guide"><div class="anchors">Guide</div></a>
+    <a class="component" href="#information"><div class="anchors">Information</div></a>
+    <a class="component" href="#contact"><div class="anchors">Contact</div></a>
+    
+  </div>
+
+  <div id="content">
+    <div id="home">
+        <div class="content">
+          <div class="text" style="margin-left: 100px;">
+            <div style="font-size: 50px;font-weight: 400;margin-left: -50px;">Welcome to our website!</div>
+            <div style="font-size: 20px;padding-top: 30px;">This is a website I made for</div><div style="color: #B30000;margin-left: 260px;margin-top: -30px; font-size: 30px;font-weight: bolder;"> JOBFREAK.</div>
+          </div>
+          <div class="image" style="padding-top: 100px;">
+            <img src="images/home.jpg" alt="Image" style="height: 300px;width: 500px;margin-left: 650px;">
+          </div>
+        </div>
+      </div>
+      
+      <div id="guide" style="width: 600px;">
+        <h2 style="font-size: 50px; font-weight:bold; margin-top: 50px;">Guide Content</h2>
+        <div class="matter" style="font-size: 25px;">
+        <h3>About JobFreak</h3>
+        <p>Welcome to JobFreak, your one-stop solution for all your job search needs. We understand how challenging it can be to navigate the job market, and that's why we're here to help. With our comprehensive guide, you'll find valuable information and resources to enhance your job search and increase your chances of success.</p>
+        
+       
+        <h3>JobFreak Community</h3>
+        <p>Join our vibrant JobFreak community and connect with like-minded professionals. Engage in discussions, share experiences, and learn from others' successes and challenges. Collaborate, network, and expand your professional circle.</p>
+      </div>
+    </div>
+<div><img src="images/contact.png" style="margin-left: 700px; margin-top: -200px;"></div>
+
+
+
+      
+      <div id="information">
+        <h2 style="font-size: 50px; font-weight:bold;" >Information Content</h2>
+        <div class="content2">
+          <div class="text2" style="padding-top: 150px; width: 650px;font-size: 25px;">
+            <p style="font-weight:550;">"As per Shyam's instructions, I successfully implemented the left sidebar on the webpage. The sidebar features minimalistic design elements and allows seamless navigation to specific sections of the webpage upon clicking. I accomplished this project within a span of one hour, ensuring efficiency in my work."</p>
+          </div>
+          <div class="image2">
+            <img src="images/yes.gif" alt="Image" style="margin-left: 700px; margin-top: -250px; width: 30%;height: auto;">
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="contact">
+        <div style="font-size: 40px; font-weight:bold;" >Contact Us</div>
+        <p> </p>
+        <img src="images/jj.png" alt="Contact Image" style="margin-left: 500px;" />
+        <div class="conadana" style="margin-top: -450px;">
+        <ul>
+            <h2>Branch-1</h2>
+          <li>Email: contact@JOBFREAK.com</li>
+          <li>Phone: 123-456-7890</li>
+          <li>Address: 123 Main Street, Visakhapatnam, India</li>
+        </ul>
+        <ul>
+            <h2>Branch-2</h2>
+            <li>Email: contact@JOBFREAK.com</li>
+            <li>Phone: 123-456-7890</li>
+            <li>Address: 123 Main Street, Visakhapatnam, India</li>
+          </ul>
+          <ul>
+            <h2>Branch-3</h2>
+            <li>Email: contact@JOBFREAK.com</li>
+            <li>Phone: 123-456-7890</li>
+            <li>Address: 123 Main Street, Visakhapatnam, India</li>
+          </ul>
+        </div>
+      </div>
+      
+
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var components = document.getElementsByClassName("component");
+      for (var i = 0; i < components.length; i++) {
+        components[i].addEventListener("click", scrollToSection);
+      }
+    });
+    function scrollToSection(event) {
+  event.preventDefault();
+  var targetId = this.getAttribute("href").substr(1);
+  var targetSection = document.getElementById(targetId);
+
+  var offsetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+
+  document.getElementById("left-panel").classList.remove("open");
+}
+
+
+  </script>
+  
+</body>
+</html>
